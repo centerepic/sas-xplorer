@@ -1,7 +1,4 @@
-local Request = nil
-pcall(function()
-	Request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
-end)
+Request = nil -- (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 
 if not Request then
     Request = function(Table)
